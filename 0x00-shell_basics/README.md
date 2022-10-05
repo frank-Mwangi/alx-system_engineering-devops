@@ -5,3 +5,4 @@
 7 moves the betty file
 8 deletes the file betty from my first directory
 9 deletes my first directory
+10 is back to the future
