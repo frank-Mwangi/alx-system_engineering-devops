@@ -9,3 +9,4 @@
 12 outputs the file type
 13 is assigning a symbolic link
 Create symbolic link
+14 copies only html files
