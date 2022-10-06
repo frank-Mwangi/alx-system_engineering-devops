@@ -1,1 +1,1 @@
-Change user to Betty
+Print effective ID of current user
