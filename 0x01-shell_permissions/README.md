@@ -1,1 +1,1 @@
-Everybody gets execution permission
+Nobody but others gets full permission
