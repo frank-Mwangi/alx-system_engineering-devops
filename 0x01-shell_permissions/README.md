@@ -1,1 +1,1 @@
-Adding execute permisssions to subdirectories of cwd to all users
+Creates a directory and gives permissions 751
