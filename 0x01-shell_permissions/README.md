@@ -1,1 +1,1 @@
-Nobody but others gets full permission
+John Doe
