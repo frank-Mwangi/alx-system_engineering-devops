@@ -1,1 +1,1 @@
-Print groups of current user
+Change file owner to betty
