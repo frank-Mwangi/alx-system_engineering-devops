@@ -1,1 +1,1 @@
-Print effective ID of current user
+Print groups of current user
