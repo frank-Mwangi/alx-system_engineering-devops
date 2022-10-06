@@ -1,1 +1,1 @@
-Change owners and group owner of symbolic link
+Conditional file ownership change
