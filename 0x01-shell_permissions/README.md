@@ -1,1 +1,1 @@
-Change owner and group
+Change owners and group owner of symbolic link
