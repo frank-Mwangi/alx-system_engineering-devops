@@ -1,1 +1,1 @@
-Gives owner execute permissions
+Give multiple permissions
