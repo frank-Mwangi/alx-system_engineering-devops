@@ -1,1 +1,1 @@
-Displaying contents of two files
+Printing the last 10 lines
