@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Displays numbers 1 to 20, highlighting superstitious numbers when they appear
-i=0
+i=1
 while [ $i -le 20 ]
 do
 	case $i in
