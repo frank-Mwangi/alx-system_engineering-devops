@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Establish connection with remote server
+ssh -i ~/.ssh/school ubuntu@100.25.103.66
