@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Configure Nginx server for 404 not found
 
-sudo apt-get -y update
+sudo apt-get update
 sudo apt-get install -y nginx
 sudo chmod go+w /etc/nginx/sites-available/default
 sudo touch /var/www/html/index.html
