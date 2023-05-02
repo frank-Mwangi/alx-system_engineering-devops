@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Installs a load balancer and configures it to
+# send roundrobin traffic to 2 servers
+
+sudo apt-get update
+sudo apt-get install -y haproxy
+
+sudo chmod go+w /etc/haproxy/haproxy.cfg
+echo "
+frontend http
+	bind *:80
+	default_backend my_backend
+backend my_backend
+	balance roundrobin
+	server 172699-web-01 100.25.103.66:80 check
+	server 172699-web-02 100.25.215.1:80 check
+" >> /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
