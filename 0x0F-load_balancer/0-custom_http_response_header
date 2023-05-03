@@ -14,7 +14,7 @@ sudo chmod go+w /var/www/html/error.html
 echo "Ceci n'est pas une page" > /var/www/html/error.html
 
 echo "server {
-	listen 80 default server;
+	listen 80 default_server;
 	listen [::]:80 default_server;
 	root /var/www/html;
 	add_header X-Served-By $HOSTNAME;
