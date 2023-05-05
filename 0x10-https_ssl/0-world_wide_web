@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bash script to add and display subdomains
 
-get_subdm_info() {
+get_subdmn_info() {
     if [ "$#" -eq 1 ]
     then
     subdomains=('www' 'lb-01' 'web-01' 'web-02')
