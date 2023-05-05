@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Bash script to add and display subdomains
+
+if [ "$#" = 1 ]
+then
+    subdomains=('www' 'lb-01' 'web-01' 'web-02')
+    for subdmn in "${subdomains[@]}"
+    do
+        RECORD_TYPE=$(dig $subdmn.$1 | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $4}')
+        DESTINATION=$(dig $subdmn.$1 | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $5}')
+        echo "The subdomain $subdmn is a $RECORD_TYPE record and points to $DESTINATION"
+    done
+elif [ "$#" = 2 ]
+then
+    RECORD_TYPE=$(dig $2.$1 | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $4}')
+    DESTINATION=$(dig $2.$1 | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $5}')
+    echo "The subdomain $2 is a $RECORD_TYPE record and points to $DESTINATION"
+fi
