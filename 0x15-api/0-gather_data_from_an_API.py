@@ -23,7 +23,7 @@ if __name__ == "__main__":
                 if i.get("completed") is True:
                     donetasks.append(i)
             count = len(donetasks)
-            print("Employee {} is done with tasks ({}/{}):"
+            print("Employee {} is done with tasks({}/{}):"
                   .format(username, count, totaltasks))
             for task in donetasks:
                 print("\t {}".format(task.get("title")))
