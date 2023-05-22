@@ -9,22 +9,19 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    if len(argv) > 1:
-        id = argv[1]
-        url = "https://jsonplaceholder.typicode.com/"
-        req = requests.get("{}users/{}".format(url, id))
-        username = req.json().get("name")
-        if username is not None:
-            jsonreq = requests.get(
-                "{}todos?userId={}".format(
-                    url, id)).json()
-            totaltasks = len(jsonreq)
-            donetasks = []
-            for i in jsonreq:
-                if i.get("completed") is True:
-                    donetasks.append(i)
-            count = len(donetasks)
-            print("Employee {} is done with tasks({}/{}):"
-                  .format(username, count, totaltasks))
-            for task in donetasks:
-                print("\t {}".format(task.get("title")))
+    id = argv[1]
+    url = "https://jsonplaceholder.typicode.com/"
+    user = requests.get(url + "users/{}".format(id)).json()
+    toDo = requests.get(url + "todos?userId={}".format(id)).json()
+    name = user.get("name")
+    done = 0
+    totalTasks = 0
+    for task in toDo:
+        totalTasks += 1
+        if task.get('completed') is True:
+            done += 1
+    print("Employee {} is done with tasks({}/{}):"
+          .format(name, done, totalTasks))
+    for task in toDo:
+        if task.get('completed') is True:
+            print("\t {}".format(task.get("title")))
