@@ -4,8 +4,8 @@ Returns info about an employee's todo
 list progress
 """
 
-from sys import argv
 import requests
+from sys import argv
 
 
 if __name__ == "__main__":
