@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Backs up databases
+
+if [[ $# -eq 1 ]]; then
+current_date=$(date '+%d-%m-%Y')
+mysqldump -h localhost -u root -p"$1" --all-databases > backup.sql &&
+echo "backup.sql"
+gzip -c backup.sql > "$current_date".tar.gz
+fi
