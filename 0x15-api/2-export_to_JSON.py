@@ -10,12 +10,12 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    id = argv[1]
+    id = int(argv[1])
     url = "https://jsonplaceholder.typicode.com/"
     users = requests.get("https://jsonplaceholder.typicode.com/users/{}"
-                         .format(id).json())
+                         .format(id)).json()
     tasks = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
-                         .format(id).json())
+                         .format(id)).json()
 
     with open("{}.json".format(id), "w") as userId:
         json.dump({id: [{
